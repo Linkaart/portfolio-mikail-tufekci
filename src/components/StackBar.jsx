@@ -1,14 +1,14 @@
-const stack = ['Python', 'ReactJS', 'Java', 'PHP', 'SQL', 'Flutter', 'Linux', 'Symfony', 'Keras', 'Git', 'Dart', 'Node.js', 'Docker', 'Scrum']
+const stack = ["Python", "ReactJS", "Java", "PHP", "SQL", "Flutter", "Linux", "Symfony", "Keras", "Git", "Dart", "Node.js", "Docker", "Scrum"]
 
 export default function StackBar() {
   const doubled = [...stack, ...stack]
   return (
     <div style={{
-      position: 'relative', zIndex: 1,
-      borderTop: '1px solid var(--border)',
-      borderBottom: '1px solid var(--border)',
-      background: 'var(--surface)',
-      padding: '1rem 0', overflow: 'hidden',
+      position: "relative", zIndex: 1,
+      borderTop: "1px solid var(--border)",
+      borderBottom: "1px solid var(--border)",
+      background: "var(--surface)",
+      padding: "1rem 0", overflow: "hidden",
     }}>
       <div style={{
         display: 'flex', gap: '3rem',

@@ -5,7 +5,7 @@ export default function Cursor() {
   const ring = useRef(null)
 
   useEffect(() => {
-    const isMobile = window.matchMedia('(max-width: 768px)').matches
+    const isMobile = window.matchMedia("(max-width: 768px)").matches
     if (isMobile) return
 
     let rx = 0, ry = 0, mx = 0, my = 0
@@ -15,8 +15,8 @@ export default function Cursor() {
       mx = e.clientX
       my = e.clientY
       if (dot.current) {
-        dot.current.style.left = mx + 'px'
-        dot.current.style.top  = my + 'px'
+        dot.current.style.left = mx + "px"
+        dot.current.style.top  = my + "px"
       }
     }
 
@@ -24,19 +24,19 @@ export default function Cursor() {
       rx += (mx - rx) * 0.12
       ry += (my - ry) * 0.12
       if (ring.current) {
-        ring.current.style.left = rx + 'px'
-        ring.current.style.top  = ry + 'px'
+        ring.current.style.left = rx + "px"
+        ring.current.style.top  = ry + "px"
       }
       raf = requestAnimationFrame(lerp)
     }
 
-    const over = () => ring.current && ring.current.classList.add('hovered')
-    const out  = () => ring.current && ring.current.classList.remove('hovered')
+    const over = () => ring.current && ring.current.classList.add("hovered")
+    const out  = () => ring.current && ring.current.classList.remove("hovered")
 
-    document.addEventListener('mousemove', move)
-    document.querySelectorAll('a, button').forEach(el => {
-      el.addEventListener('mouseenter', over)
-      el.addEventListener('mouseleave', out)
+    document.addEventListener("mousemove", move)
+    document.querySelectorAll("a, button").forEach(el => {
+      el.addEventListener("mouseenter", over)
+      el.addEventListener("mouseleave", out)
     })
     raf = requestAnimationFrame(lerp)
 
