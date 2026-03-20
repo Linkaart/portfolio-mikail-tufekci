@@ -104,4 +104,4 @@ Ou importer directement depuis vercel.com → New Project → GitHub.
 
 ## 📄 Licence
 
-MIT — © 2025 Mikail Tufekci
+ © 2025 Mikail Tufekci
